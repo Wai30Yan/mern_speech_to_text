@@ -8,6 +8,7 @@ import speechRoute from './routes/speech.js'
 import userRoute from './routes/user.js'
 
 import path from 'path'
+
 // const path = require("path")
 
 const app = express()
@@ -19,10 +20,11 @@ app.use(cors())
 app.use('/speech', speechRoute)
 app.use('/user', userRoute)
 
-app.use(express.static(path.join(__dirname, "/frontend/build")));
+
+app.use(express.static(path.dirname('/frontend/build')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/frontend/build', 'index.html'));
+  res.sendFile(path.join(dirname('/frontend/build/'), 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000
