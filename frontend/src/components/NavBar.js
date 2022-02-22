@@ -33,7 +33,7 @@ const NavBar = () => {
     }
 
     setUser(JSON.parse(localStorage.getItem('profile')))
-  }, [location])
+  }, [location, navigate])
   
 
   return (
