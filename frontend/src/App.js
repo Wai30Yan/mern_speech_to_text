@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import Speech from './components/Speech';
 import { Route, Routes } from 'react-router-dom';
@@ -6,8 +6,6 @@ import SavedNotes from './components/SavedNotes/SavedNotes';
 import NavBar from './components/NavBar'
 import Auth from './components/Auth/Auth';
 import UpdataNotePage from './components/UpdateNotePage/UpdateNotePage';
-import { useDispatch, useSelector } from 'react-redux';
-import { getSpeeches } from './actions/speech';
 
 function App() {
 

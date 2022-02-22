@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import AddedNotes from "./AddedNotes";
-import { createSpeech, getSpeeches } from "../actions/speech";
+import { createSpeech } from "../actions/speech";
 import Links from "./Links/Links";
 
 const SpeechRecognition =

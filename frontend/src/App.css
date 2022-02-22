@@ -35,13 +35,15 @@ body {
 }
 
 .speechbox {
-  width: 50%;
+  /* width: 50%; */
+  flex: 1;
   margin: 6px;
   border-radius: 10px;
 }
 
 .savebox {
-  width: 50%;
+  /* width: 50%; */
+  flex: 1;
   margin: 6px;
   border-radius: 10px;
 }
@@ -118,6 +120,8 @@ body {
   border: 1px transparent solid;
   padding: 10px;
   margin: 10px auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .savednote:hover {
@@ -253,5 +257,11 @@ body {
     grid-auto-rows: 200px;
     column-gap: 1em;
     padding: 10px;
+  }  
+}
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    height: 100vh;
   }  
 }
