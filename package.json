@@ -9,7 +9,8 @@
     "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
   },
   "engines": {
-    "node": "16.13.1"
+    "node": "16.13.1",
+    "npm": "7.15.1"
   },
   "keywords": [],
   "author": "",
