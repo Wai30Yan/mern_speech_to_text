@@ -24,7 +24,7 @@ app.use('/user', userRoute)
 app.use(express.static(path.dirname('/frontend/build')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join('/frontend/build/', 'index.html'));
+  res.sendFile(path.join(path.dirname('/frontend'), path.dirname('/build'), 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000
