@@ -21,7 +21,7 @@ app.use('/speech', speechRoute)
 app.use('/user', userRoute)
 
 
-app.use(express.static(path.dirname('/frontend/build')));
+app.use(express.static(path.join(path.dirname('/frontend'), path.dirname('/build'))));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(path.dirname('/frontend'), path.dirname('/build'), 'index.html'));
