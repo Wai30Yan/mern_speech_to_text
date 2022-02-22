@@ -7,7 +7,8 @@ import dotenv from 'dotenv'
 import speechRoute from './routes/speech.js'
 import userRoute from './routes/user.js'
 
-const path = require("path")
+import path from 'path'
+// const path = require("path")
 
 const app = express()
 dotenv.config()
