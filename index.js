@@ -7,6 +7,8 @@ import dotenv from 'dotenv'
 import speechRoute from './routes/speech.js'
 import userRoute from './routes/user.js'
 
+const path = require("path")
+
 const app = express()
 dotenv.config()
 
@@ -16,7 +18,12 @@ app.use(cors())
 app.use('/speech', speechRoute)
 app.use('/user', userRoute)
 
-//const CONNECTION_URL = 'mongodb+srv://Speech2Text:Speech2Text@cluster0.d1oze.mongodb.net/Speech2Text?retryWrites=true&w=majority'
+app.use(express.static(path.join(__dirname, "/frontend/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/frontend/build', 'index.html'));
+});
+
 const PORT = process.env.PORT || 5000
 
 mongoose.connect(process.env.CONNECTION_URL)
