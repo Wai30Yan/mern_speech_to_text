@@ -18,13 +18,15 @@ app.use(cors())
 app.use('/speech', speechRoute)
 app.use('/user', userRoute)
 
-app.use(express.static(path.join('/frontend', '/build')));
+app.use(express.static(path.resolve(process.cwd(), 'frontend/build')));
+// app.use(express.static(path.join('/frontend', '/build')));
 
 console.log(path.join('/frontend', '/build'))
 console.log("individual", express.static(path.join('/frontend', '/build')))
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join('/frontend', '/build', 'index.html'));
+  res.sendFile(path.resolve(process.cwd(), 'frontend/build/index.html'))
+  // res.sendFile(path.join('/frontend', '/build', 'index.html'));
 });
 
 console.log("sendFile path", path.join('/frontend', '/build', 'index.html'))
