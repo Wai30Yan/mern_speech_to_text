@@ -23,7 +23,9 @@ app.use(cors())
 app.use('/speech', speechRoute)
 app.use('/user', userRoute)
 
-// const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(__filename);
+
+console.log(__filename, __dirname)
 // app.use(express.static(__dirname));
 app.use(express.static(path.join(path.dirname('/frontend'), path.dirname('/build'))));
 
@@ -31,6 +33,8 @@ app.get('*', (req, res) => {
   // res.sendFile(path.join(__dirname, 'index.html'));
   res.sendFile(path.join(path.dirname('/frontend'), path.dirname('/build'), __filename));
 });
+
+console.log("sendFile path", path.join(path.dirname('/frontend'), path.dirname('/build'), __filename))
 
 const PORT = process.env.PORT || 5000
 
