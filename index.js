@@ -26,10 +26,10 @@ app.use('/user', userRoute)
 const __dirname = path.dirname(__filename);
 
 // app.use(express.static(__dirname));
-app.use(express.static(path.join(path.dirname('/frontend'), path.dirname('/build'))));
+app.use(express.static(path.join('/frontend', '/build')));
 
-console.log(path.join(path.dirname('/frontend'), path.dirname('/build')))
-console.log("individual", path.dirname('/frontend'), path.dirname('/build'))
+console.log(path.join('/frontend', '/build'))
+console.log("individual", express.static(path.join('/frontend', '/build')))
 
 app.get('*', (req, res) => {
   // res.sendFile(path.join(__dirname, 'index.html'));
