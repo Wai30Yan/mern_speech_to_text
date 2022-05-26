@@ -46,24 +46,24 @@ const Auth = () => {
   }
 
   return (
-      <>
-        <form onSubmit={handleSubmit}>
-          {/* <div className="form-container" style={{ margin: '20px', padding: '15px' }} > */}
-              <div className="form" style={{ display: 'flex', flexDirection: 'column', width: '50%', alignItems: 'center', margin: '15px auto', marginTop: '10%' }} >
-                  <h1 style={{ margin: '10px', padding: '5px' }} >{register ? 'Register' : 'Login'}</h1>
-                  {register ? <Input type="text" name='firstName' value={formData.firstName} handleChange={handleChange} placeholder='First Name' /> : null}
-                  {register ? <Input type="text" name='lastName' value={formData.lastName} handleChange={handleChange} placeholder='Last Name' /> : null}
-                  <Input type="text" name='email' value={formData.email} handleChange={handleChange} placeholder='Email' />
-                  <Input type={visibility ? 'text' : 'password'} name='password' value={formData.password} handleChange={handleChange} handleVisibility={handleVisibility} placeholder='Password' />
-                  {register ? <Input type="text" name='confirmPassword' value={formData.confirmPassword} handleChange={handleChange} placeholder='Confirm Password' /> : null}
-                  <button type="submit" className="btn" style={{ width: '90px' }} onClick={handleSubmit} >{register ? 'Sign Up' : 'Sign In'}</button>
-                  <span className="toggleRegister"  onClick={toggleRegister} >{register ? 'Already have an accout?' : "Don't have an account?"}</span>
-              </div>
-          {/* </div> */}
-        </form>
-      </>
-
+    <>
+      <form onSubmit={handleSubmit}>
+        <div className="form" style={{ display: 'flex', flexDirection: 'column', width: '50%', alignItems: 'center', margin: '15px auto', marginTop: '10%' }} >
+          <h1 style={{ margin: '10px', padding: '5px' }} >{register ? 'Register' : 'Login'}</h1>
+          {register ? <Input type="text" name='firstName' value={formData.firstName} handleChange={handleChange} placeholder='First Name' /> : null}
+          {register ? <Input type="text" name='lastName' value={formData.lastName} handleChange={handleChange} placeholder='Last Name' /> : null}
+          <Input type="text" name='email' value={formData.email} handleChange={handleChange} placeholder='Email' />
+          <Input type={visibility ? 'text' : 'password'} name='password' value={formData.password} handleChange={handleChange} handleVisibility={handleVisibility} placeholder='Password' />
+          {register ? <Input type="text" name='confirmPassword' value={formData.confirmPassword} handleChange={handleChange} placeholder='Confirm Password' /> : null}
+          <button type="submit" className="btn" style={{ width: '90px' }} onClick={handleSubmit} >{register ? 'Sign Up' : 'Sign In'}</button>
+          <span className="toggleRegister"  onClick={toggleRegister} >{register ? 'Already have an accout?' : "Don't have an account?"}</span>
+        </div>
+      </form>
+    </>
   ) 
 };
 
 export default Auth;
+
+/* <div className="form-container" style={{ margin: '20px', padding: '15px' }} > */
+/* </div> */

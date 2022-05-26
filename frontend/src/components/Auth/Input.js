@@ -3,9 +3,6 @@ import { MdOutlineVisibility, MdOutlineMail, MdPassword } from 'react-icons/md';
 import { FaUserCircle } from 'react-icons/fa';
 
 const Input = (props) => {
-
-
-
   return (
     <>
       <div className="input-icons" style={{ width: '100%'}}>

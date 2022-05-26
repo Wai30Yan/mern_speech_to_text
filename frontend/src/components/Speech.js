@@ -25,13 +25,6 @@ const Speech = () => {
   const user = JSON.parse(profile)
   const userName =`${user?.result?.firstName} ${user?.result?.lastName}`
 
-  // const notes = useSelector((state) => state.speeches) // state.speech is a reducer
-
-  // console.log(notes);
-  // useEffect(() => {
-  //   dispatch(getSpeeches())
-  // }, [dispatch])
-
   useEffect(() => {
     const handleListen = () => {
       if (isListening) {
@@ -153,3 +146,12 @@ const Speech = () => {
 };
 
 export default Speech;
+
+
+
+  // const notes = useSelector((state) => state.speeches) // state.speech is a reducer
+
+  // console.log(notes);
+  // useEffect(() => {
+  //   dispatch(getSpeeches())
+  // }, [dispatch])

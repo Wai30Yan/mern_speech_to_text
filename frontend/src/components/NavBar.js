@@ -37,36 +37,28 @@ const NavBar = () => {
   
 
   return (
-      <>
-        <div className='navbar' >
-          <h1 style={{ margin: '10px', padding: '5px' }}>Voice Memo</h1>
-            {/* <button className='btn' style={{ width: 'auto' }} onClick={auth} >
-              Auth Test
-            </button> */}
-          {
-            user ?
-            <>
-              <Link to='/'>
-                <button className='btn' onClick={logout} >
-                  LOGOUT
-                </button>
-              </Link>
-            </> : 
-            <>
-              <Link to='/auth'>
-                <button className='btn' >
-                  LOGIN
-                </button>
-              </Link>
-            </>
-          }
-          {/* <Link to={user === null ? '/auth' : '/'}>
-            <button className='btn' onClick={logout} >
-              {user === null ? "LOGIN" : "LOGOUT"}
-            </button>
-          </Link> */}
-        </div>
-      </>
+    <>
+      <div className='navbar' >
+        <h1 style={{ margin: '10px', padding: '5px' }}>Voice Memo</h1>
+        {
+          user ?
+          <>
+            <Link to='/'>
+              <button className='btn' onClick={logout} >
+                LOGOUT
+              </button>
+            </Link>
+          </> : 
+          <>
+            <Link to='/auth'>
+              <button className='btn' >
+                LOGIN
+              </button>
+            </Link>
+          </>
+        }
+      </div>
+    </>
   )
 };
 
