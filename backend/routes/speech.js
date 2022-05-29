@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { getSpeeches, createSpeech, getSpeech, updateSpeech, deleteSpeech, authTest } from '../controllers/speech.js'
+import { getSpeeches, createSpeech, getSpeech, updateSpeech, deleteSpeech } from '../controllers/speech.js'
 import auth from '../middleware/auth.js'
 
 const router = express.Router()
