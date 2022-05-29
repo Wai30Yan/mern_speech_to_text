@@ -13,7 +13,7 @@ mic.continuous = true;
 mic.interimResults = true;
 mic.lang = "en-US";
 
-//console.log(mic)
+console.log(mic)
 
 const Speech = () => {
   const [isListening, setIsListening] = useState(false);
