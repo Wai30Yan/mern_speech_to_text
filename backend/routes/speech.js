@@ -11,6 +11,6 @@ router.post('/', auth, createSpeech)
 router.patch('/:id', auth, updateSpeech)
 router.delete('/:id', auth, deleteSpeech)
 
-router.post('/test', auth, authTest)
-
 export default router
+
+// router.post('/test', auth, authTest)
