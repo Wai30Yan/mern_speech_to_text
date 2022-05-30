@@ -17,9 +17,10 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    id: {
-        type: String
-    }
 })
 
 export default mongoose.model("User", userSchema)
+
+// id: {
+//     type: String
+// }
