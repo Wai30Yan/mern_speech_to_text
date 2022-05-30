@@ -5,6 +5,5 @@ import { authReducer } from './auth'
 
 export default combineReducers({
     speeches,
-    //singleSpeech,
     authReducer
 })

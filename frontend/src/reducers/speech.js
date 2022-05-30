@@ -15,15 +15,3 @@ export const speeches = (speeches = [], action) => {
     }
 }
 
-// export const singleSpeech = (speech = {}, action) => {
-//     switch(action.type) {
-//         case FETCH_SPEECH:
-//             return action.payload;
-//         case UPDATE_NOTE:
-//             return action.payload;
-//         case DELETE_NOTE:
-//             return [...speech];
-//         default:
-//             return speech;
-//     }
-// }

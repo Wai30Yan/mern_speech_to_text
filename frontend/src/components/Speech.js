@@ -13,7 +13,7 @@ mic.continuous = true;
 mic.interimResults = true;
 mic.lang = "en-US";
 
-console.log(mic)
+//console.log(mic)
 
 const Speech = () => {
   const [isListening, setIsListening] = useState(false);
@@ -49,7 +49,7 @@ const Speech = () => {
         .map((result) => result[0])
         .map((result) => result.transcript)
         .join("");
-        
+
         setNote(transcript);
         
         mic.onerror = (event) => {
